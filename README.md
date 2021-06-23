@@ -33,6 +33,7 @@ Install and setup ubuntu server on all 3 servers. Remember to chose to install O
 
 - **Tidy up the setup**
     - [Remove Snaps](https://www.kevin-custer.com/blog/disabling-snaps-in-ubuntu-20-04/)
+    
         Snaps are great. We dont need them.
         - Check preinstalled snaps, `snap list`
             ```
