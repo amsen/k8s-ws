@@ -33,7 +33,7 @@ Install and setup ubuntu server on all 3 servers. Remember to chose to install O
 
 - **Tidy up the setup**
     - Remove Snaps
-        Snaps are great. We dont need them.
+        - Snaps are great. We dont need them.
             - Check preinstalled snaps, `snap list`
             ```
             Name    Version   Rev    Tracking       Publisher   Notes
