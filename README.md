@@ -47,3 +47,19 @@ Install and setup ubuntu server on all 3 servers. Remember to chose to install O
             sudo snap remove core18
             sudo snap remove snapd
             ```
+            - Unmount the snap mount points
+                - Run `df`. If you find an entry that looks like `/snap/core/xxxx`, unmount it. xxxx will be diffeerent in your setup.
+                    ```
+                    sudo umount /snap/core/xxxx
+                    ```
+            - Remove and purge the snapd package
+                ```
+                sudo apt purge snapd
+                ```
+            - Remove any lingering snapd folders
+                ```
+                rm -rf ~/snap
+                sudo rm -rf /snap
+                sudo rm -rf /var/snap
+                sudo rm -rf /var/lib/snapd
+                ```
