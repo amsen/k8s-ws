@@ -35,18 +35,18 @@ Install and setup ubuntu server on all 3 servers. Remember to chose to install O
     - Remove Snaps
         - Snaps are great. We dont need them.
             - Check preinstalled snaps, `snap list`
-            ```
-            Name    Version   Rev    Tracking       Publisher   Notes
-            core18  20210507  2066   latest/stable  canonical✓  base
-            lxd     4.0.6     20326  4.0/stable/…   canonical✓  -
-            snapd   2.51      12159  latest/stable  canonical✓  snapd
-            ```
+                ```
+                Name    Version   Rev    Tracking       Publisher   Notes
+                core18  20210507  2066   latest/stable  canonical✓  base
+                lxd     4.0.6     20326  4.0/stable/…   canonical✓  -
+                snapd   2.51      12159  latest/stable  canonical✓  snapd
+                ```
             - Remove the packages
-            ```
-            sudo snap remove lxd
-            sudo snap remove core18
-            sudo snap remove snapd
-            ```
+                ```
+                sudo snap remove lxd
+                sudo snap remove core18
+                sudo snap remove snapd
+                ```
             - Unmount the snap mount points
             Run `df`. If you find an entry that looks like `/snap/core/xxxx`, unmount it. xxxx will be diffeerent in your setup.
                 ```
