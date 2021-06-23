@@ -32,34 +32,34 @@ OS of choice is Ubuntu Server v20.04. It is a LTS version and since I am familia
 Install and setup ubuntu server on all 3 servers. Remember to chose to install Openssh server on each during server installation. This lets you easliy login to the nodes for further setup.
 
 - **Tidy up the setup**
-    - Remove Snaps
-        - Snaps are great. We dont need them.
-            - Check preinstalled snaps, `snap list`
-                ```
-                Name    Version   Rev    Tracking       Publisher   Notes
-                core18  20210507  2066   latest/stable  canonical✓  base
-                lxd     4.0.6     20326  4.0/stable/…   canonical✓  -
-                snapd   2.51      12159  latest/stable  canonical✓  snapd
-                ```
-            - Remove the packages
-                ```
-                sudo snap remove lxd
-                sudo snap remove core18
-                sudo snap remove snapd
-                ```
-            - Unmount the snap mount points
-            Run `df`. If you find an entry that looks like `/snap/core/xxxx`, unmount it. xxxx will be diffeerent in your setup.
-                ```
-                sudo umount /snap/core/xxxx
-                ```
-            - Remove and purge the snapd package
-                ```
-                sudo apt purge snapd
-                ```
-            - Remove any lingering snapd folders
-                ```
-                rm -rf ~/snap
-                sudo rm -rf /snap
-                sudo rm -rf /var/snap
-                sudo rm -rf /var/lib/snapd
-                ```
+    - [Remove Snaps](https://www.kevin-custer.com/blog/disabling-snaps-in-ubuntu-20-04/)
+        Snaps are great. We dont need them.
+        - Check preinstalled snaps, `snap list`
+            ```
+            Name    Version   Rev    Tracking       Publisher   Notes
+            core18  20210507  2066   latest/stable  canonical✓  base
+            lxd     4.0.6     20326  4.0/stable/…   canonical✓  -
+            snapd   2.51      12159  latest/stable  canonical✓  snapd
+            ```
+        - Remove the packages
+            ```
+            sudo snap remove lxd
+            sudo snap remove core18
+            sudo snap remove snapd
+            ```
+        - Unmount the snap mount points
+        Run `df`. If you find an entry that looks like `/snap/core/xxxx`, unmount it. xxxx will be diffeerent in your setup.
+            ```
+            sudo umount /snap/core/xxxx
+            ```
+        - Remove and purge the snapd package
+            ```
+            sudo apt purge snapd
+            ```
+        - Remove any lingering snapd folders
+            ```
+            rm -rf ~/snap
+            sudo rm -rf /snap
+            sudo rm -rf /var/snap
+            sudo rm -rf /var/lib/snapd
+            ```
